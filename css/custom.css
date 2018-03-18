@@ -1,0 +1,35 @@
+body {
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  color: #696969;
+  background-image:url('../img/wallpaper.gif');
+  margin: 20px 100px;
+}
+
+
+#settingsWrapper {
+  font-size: 20px;
+  position: absolute;
+}
+
+svg {
+  background-color: white;
+  margin:10px 500px 50px;
+}
+
+#descriptionWrapper {
+  float: right;
+  margin-left: 20px;
+}
+
+#simulateButton {
+  margin-top: 20px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
