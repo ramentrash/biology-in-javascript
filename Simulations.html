@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"> 
+
+<html>
+	<head>
+		<style>
+			#graphicsDiv {
+				float: left;
+				margin-right: 25px;
+			}
+			.inputWrapper {
+				display: none;
+			}
+			#descriptionWrapper {
+				width: 600px;
+			}
+		</style>
+		
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="draw_line_chart.js"></script>
+		<script src="draw_grid.js"></script>
+		
+		<script src="simulation_picker.js"></script>
+		
+		<script src="genetic_drift.js"></script>
+		<script src="spatial_breeding.js"></script>
+		<script src="natural_selection.js"></script>
+		<script src="selection_types.js"></script>
+		<script src="coevolution.js"></script>
+		<script src="disease_spread.js"></script>
+		
+	</head>
+	
+	<body>
+		<div id="selectionDiv">
+			Select simulation:
+			<select id="selection" onchange="simulation_picker()">
+				<option value=" "> </option>
+				<option value="drift">Genetic Drift</option>
+				<option value="breeding">Spatial Breeding</option>
+				<option value="natural_selection">Natural Selection</option>
+				<option value="selection_types">Selection Types</option>
+				<option value="coevolution">Coevolution</option>
+				<option value="disease">Disease Spread</option>
+			</select>
+		</div>
+		
+		<script>
+			document.getElementById('selection').selectedIndex = "0";
+		</script>
+		
+		<div id="descriptionWrapper">
+			<p id="description">
+			</p>
+		</div>
+		
+		<div id="graphicsDiv">
+		</div>
+		
+		<div id="settingsWrapper">
+			<div id="settings">
+			
+				<div id="frequencyWrapper" class="inputWrapper">
+					<p>Starting frequency of first allele:</p>
+					<input type="number" id="frequency" min="0.01" max ="1" step="0.01" value="0.5">
+				</div>
+				<div id="populationWrapper" class="inputWrapper">
+					<p>Population:</p>
+					<input type="number" id="population" min="1" max ="50000" step="1" value="400">
+				</div>
+				<div id="generationsWrapper" class="inputWrapper">
+					<p>Number of generations to simulate:</p>
+					<input type="number" id="generations" min="1" max ="10000" step="1" value="400">
+				</div>
+				<div id="simulationsWrapper" class="inputWrapper">
+					<p>Number of simulations:</p>
+					<input type="number" id="simulations" min="1" max ="100" step="1" value="10">
+				</div>
+				
+				
+				<div id="matingDistanceWrapper" class="inputWrapper">
+					<p>Maximum mating distance:</p>
+					<input type="number" id="matingDistance" min="1" step="1" value="1">
+				</div>
+				
+				
+				<div id="fitnessWrapper" class="inputWrapper">
+					<p>Fitness multiplier of advantaged allele:</p>
+					<input type="number" id="fitness" min="1" max ="5" step="0.001" value="1.01">
+				</div>
+				
+				
+				<div id="sWrapper" class="inputWrapper">
+					<p>Advantage of A1A1 against A2A2:</p>
+					<input type="number" id="s" min="-5" max ="5" step="0.01" value="0.1">
+				</div>
+				<div id="hWrapper" class="inputWrapper">
+					<p>Disadvantage multiplier of A1A2 against A2A2:</p>
+					<input type="number" id="h" min="-5" max ="5" step="0.01" value="0.2">
+				</div>
+				
+				
+				<div id="shWrapper" class="inputWrapper">
+					<p>Negative impact of infection on host:</p>
+					<input type="number" id="sh" min="0.01" max ="1" step="0.01" value="0.2">
+				</div>
+				<div id="spWrapper" class="inputWrapper">
+					<p>Positive impact of infection on parasite:</p>
+					<input type="number" id="sp" min="0.01" max ="1" step="0.01" value="0.5">
+				</div>
+				<div id="randomEffectsWrapper" class="inputWrapper">
+					<p>Random effects in the dynamic:</p>
+					<input type="number" id="randomEffects" min="0" max ="1" step="0.0001" value="0">
+				</div>
+				
+				
+				<div id="infectionFrequencyWrapper" class="inputWrapper">
+					<p>Infection frequency:</p>
+					<input type="number" id="infectionFrequency" min="0" max ="1" step="0.001" value="0.1">
+				</div>
+				<div id="rangeInfectionFrequencyWrapper" class="inputWrapper">
+					<p>Long-range infection frequency:</p>
+					<input type="number" id="rangeInfectionFrequency" min="0" max ="1" step="0.001" value="0.01">
+				</div>
+				<div id="recoveryFrequencyWrapper" class="inputWrapper">
+					<p>Recovery frequency:</p>
+					<input type="number" id="recoveryFrequency" min="0" max ="1" step="0.001" value="0.2">
+				</div>
+				
+				
+				<div id="simulateButtonWrapper" class="inputWrapper">
+					<p>
+						<input type="button" id="simulateButton" value="Simulate">
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
