@@ -14,7 +14,7 @@ body {
 
 svg {
   background-color: white;
-  margin:10px 500px 50px;
+  margin:10px 500px 70px;
 }
 
 a {
@@ -28,7 +28,13 @@ a {
 }
 
 #simulateButton {
-  margin-top: 20px;
+    background-color: #303030;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
 }
 
 .footer {
@@ -37,4 +43,20 @@ a {
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+#selectionDiv {
+  background-color: #303030;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+}
+
+input[type="button"] {
+  font-size: 30px;
+  font-family: 'VT323', monospace;
+
 }
