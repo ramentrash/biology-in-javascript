@@ -6,6 +6,9 @@ body {
   margin: 20px 100px;
 }
 
+p {
+  padding: 0 15px;
+}
 
 #settingsWrapper {
   font-size: 20px;
@@ -26,6 +29,12 @@ a {
   float: right;
   margin-left: 20px;
 }
+
+#description {
+  color: white;
+  background-color:  #303030;
+}
+
 
 #simulateButton {
     background-color: #303030;
