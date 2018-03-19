@@ -3,6 +3,7 @@ body {
   font-size: 25px;
   color: #303030;
   background-image:url('../img/wallpaper.gif');
+  background-size: 50%;
   margin: 20px 100px;
 }
 
