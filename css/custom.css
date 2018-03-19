@@ -1,7 +1,7 @@
 body {
   font-family: 'VT323', monospace;
   font-size: 25px;
-  color: ##303030;
+  color: #303030;
   background-image:url('../img/wallpaper.gif');
   margin: 20px 100px;
 }
@@ -18,12 +18,8 @@ svg {
 }
 
 a {
-  color: #303030;
-  transition: color .6s ease;
-  transition-property: color;
-  transition-duration: 0.6s;
-  transition-timing-function: ease;
-  transition-delay: initial;
+  color:  #303030;
+
 }
 
 #descriptionWrapper {
